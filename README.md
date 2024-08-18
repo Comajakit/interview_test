@@ -2,50 +2,55 @@
 
 ## Overview
 
-This is my normal project structure and not relate to this test project for interview.
+This is sample of my recently go project structure and not relate to this test project for interview.
 
 ## Project Structure
 
 The project is organized as follows:
 ```plaintext
-project-root/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           ├── config/
-│   │   │           │   └── AppConfig.java
-│   │   │           ├── constants/
-│   │   │           │   └── Constants.java
-│   │   │           ├── controller/
-│   │   │           │   └── MyController.java
-│   │   │           ├── entity/
-│   │   │           │   └── SomeEntity.java
-│   │   │           ├── model/
-│   │   │           │   └── MyModel.java
-│   │   │           ├── repository/
-│   │   │           │   └── MyRepository.java
-│   │   │           ├── service/
-│   │   │           │   └── MyService.java
-│   │   │           └── Application.java
-│   │   └── resources/
-│   │       ├── application.properties
-│   │       ├── application-local.properties
-│   │       └── application-dev.properties
-│   │
-│   ├── test/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           ├── controller/
-│   │   │           │   └── UserControllerTest.java
-│   │   │           ├── service/
-│   │   │           │   └── UserServiceTest.java
-│   │   └── resources/
-│   │       └── application-test.properties
-│   │
-├── pom.xml
+your_project/
+├── .github/
+│   └── workflows/
+│       └── ci.yml      
+├── .env
+├── .gitignore
 ├── README.md
-└── .gitignore
+├── go.mod
+├── go.sum
+├── app/
+│   ├── main.go
+│   ├── config/
+│   │   └── config.go
+│   ├── db/
+│   │   ├── connection.go
+│   │   ├── models/
+│   │   │   ├── sample_a.go
+│   │   │   └── sample_b.go
+│   │   ├── repositories/
+│   │   │   ├── sample_a_repository.go
+│   │   │   └── sample_b_repository.go
+│   │   └── migrations/
+│   │       ├── 001_create_sample_a_table.up.sql
+│   │       ├── 001_create_sample_a_table.down.sql
+│   │       ├── 002_create_sample_b_table.up.sql
+│   │       └── 002_create_sample_b_table.down.sql
+│   ├── handlers/
+│   │   ├── handler_a.go
+│   │   └── handler_b.go
+│   ├── router/
+│   │   ├── router.go
+│   │   └── middlewares/
+│   │       └── middleware.go
+│   ├── log/
+│   │   └── logger.go
+│   └── utils/
+│       └── utils.go
+├── build/
+│   ├── docker/
+│   │   └── Dockerfile
+├── scripts/
+│   ├── migrate.sh
+│   ├── run_tests.sh
+│   └── start_server.sh
+└── tests/
+    └── integration_test.go
